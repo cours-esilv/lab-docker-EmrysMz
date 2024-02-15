@@ -1,0 +1,4 @@
+docker stop emrysmeziani/app
+docker ps -a
+docker rename emrysmeziani app
+docker run -d --name app -p 8080:8080 -e CURRENT_ENVIRONMENT=production emrysmeziani/app
