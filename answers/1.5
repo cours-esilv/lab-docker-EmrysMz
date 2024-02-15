@@ -1,2 +1,1 @@
-docker build -t emrysmeziani/app -f Dockerfile .
-docker run -d --name emrysmeziani/app -p 8080:8080 -e CURRENT_ENVIRONMENT=production emrysmeziani/app environement=development
+docker run -d -p 8080:8080 -e environment=development --name emrysmeziani/app
