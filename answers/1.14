@@ -1,0 +1,9 @@
+docker stop app
+docker stop front
+
+docker remove app
+docker remove front
+
+docker rmi emrysmeziani/app
+docker rmi emrysmeziani/front
+
