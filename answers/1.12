@@ -1,0 +1,1 @@
+docker run -d -p 80:80 emrysmeziani/front -e WS_BACK_URL=http://localhost:8080
