@@ -1,0 +1,21 @@
+version: '3'
+services:
+  back:
+    image: emrysmeziani/app:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: volume
+        source: backend-data
+        target: /data
+    environment:
+      WS_BACK_URL: "http://localhost:8080"
+  front:
+    image: emrysmeziani/front:latest
+    ports:
+      - "80:80"
+    environment:
+      WS_BACK_URL: "http://localhost:8080"
+volumes:
+  backend-data:
+    name: backend-data-volume
